@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:movie/core/api_services/api_services.dart';
 import 'package:movie/core/cache_helper/cache_helper.dart';
 import 'package:movie/core/service_locator/service_locator.dart';
@@ -22,6 +23,7 @@ import 'features/auth/data/repos/auth_repo.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
   ServicesLocator.init();
   await Firebase.initializeApp(

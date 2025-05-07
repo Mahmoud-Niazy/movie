@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:movie/core/utils/app_constance.dart';
 
 class ApiServices {
@@ -7,7 +8,7 @@ class ApiServices {
   static init() {
     dio = Dio(
       BaseOptions(
-        baseUrl: 'https://imdb-top-100-movies.p.rapidapi.com/',
+        baseUrl: dotenv.env['API_BASE_URL'] ?? '',
         contentType: 'application/json',
       ),
     );

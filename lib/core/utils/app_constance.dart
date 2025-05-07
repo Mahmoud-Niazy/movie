@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 abstract class AppConstance {
-  static  Color primaryBackgroundColor = Color(0XFF121012);
+  static  Color primaryBackgroundColor = const Color(0XFF121012);
   static const Color primaryColor = Color(0XFFF00034);
-  static const String apiKey = 'e2eaa5895amshacfae7bc0e84d3ap1bed45jsn2d1651c717dd';
+  static String apiKey = dotenv.env['API_KEY'] ?? '';
   static const String appFontFamily = 'Truculenta';
 }
 
