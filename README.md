@@ -8,6 +8,7 @@
   </a>
 </div>
 
+
 A simple, clean app to watch movies, save your favorites, and chill.
 
 - Watch videos right in the app
